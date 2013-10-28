@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; user-scalable=0;" />
+    <title>My Custom HTML</title>
+
+    <style type="text/css">
+        .button {
+        border-top: 1px solid #96d1f8;
+        background: #65a9d7;
+        background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+        background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+        background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+        background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+        background: -o-linear-gradient(top, #3e779d, #65a9d7);
+        padding: 8.5px 17px;
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        border-radius: 16px;
+        -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+        -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+        box-shadow: rgba(0,0,0,1) 0 1px 0;
+        text-shadow: rgba(0,0,0,.4) 0 1px 0;
+        color: white;
+        font-size: 24px;
+        font-family: Georgia, serif;
+        text-decoration: none;
+        vertical-align: middle;
+        }
+        .button:hover {
+        border-top-color: #28597a;
+        background: #28597a;
+        color: #ccc;
+        }
+        .button:active {
+        border-top-color: #1b435e;
+        background: #1b435e;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        function onBodyLoad() {
+            var element = document.getElementById("abc");
+            window.AndroidFunction.getWebData(element.innerHTML);
+        }
+
+        function showNativeToast(msg) {
+            AndroidFunction.showNativeToast(msg);
+        }
+
+        function openNativeDialog(msg) {
+            AndroidFunction.openNativeDialog(msg);
+        }
+
+        function callFromActivity(msg){
+            var element = document.getElementById("result");
+            element.innerHTML = msg;
+        }
+        </script>
+</head>
+<body onload="onBodyLoad()">
+
+    <div id="abc">This text was inside the HTML file</div>
+
+    <input type="button" class="button" value="Call native Toast" onClick="showNativeToast('Hello Android!')" />
+    <br>
+
+    <input type="button" value="Open Native Dialog" onClick="openNativeDialog('You can do what whatever you want!')" />
+    <br>
+
+    <div id="result"></div>
+</body>
+</html>
