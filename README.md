@@ -2,12 +2,12 @@ Android Hybrid allow you to build native mobile applications using HTML, CSS and
 ======
 
 ###Objective
-Android Hybrid example that demonstrate a way to access native device function from javascript and vice-versa.
+Android Hybrid demonstrate the way of accessing native functions from javascript and vice-versa.
 
 ###Structure
 
-* Web project should always be inside our `WebPlayer/src/main/assets/wwww`
-* Native code should always be inside our `WebPlayer/src/main/java`
+* Web project should be inside the assets folder `WebPlayer/src/main/assets/wwww`
+* Native code should be inside src folder `WebPlayer/src/main/java`
 
 ###The Mechanism
 ######MyActivity.java
