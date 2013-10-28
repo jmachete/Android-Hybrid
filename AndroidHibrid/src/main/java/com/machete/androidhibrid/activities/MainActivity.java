@@ -31,10 +31,9 @@ public class MainActivity extends ActionBarActivity {
         webView.loadUrl("file:///android_asset/www/index.html");
     }
 
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        
+
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
@@ -51,7 +50,6 @@ public class MainActivity extends ActionBarActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 
     public class JavaScriptAccessor {
 
@@ -78,20 +76,18 @@ public class MainActivity extends ActionBarActivity {
 
             mTextView.setText(msg);
 
-            AlertDialog.Builder myDialog
-                    = new AlertDialog.Builder(MainActivity.this);
-            myDialog.setTitle("Dialog Box!");
-            myDialog.setMessage(msg);
-            myDialog.setPositiveButton("OK", null);
-            myDialog.show();
+            new AlertDialog.Builder(MainActivity.this)
+                    .setTitle("Dialog Box!")
+                    .setMessage(msg)
+                    .setPositiveButton("OK", null)
+                    .show();
 
         }
-
 
         public void sendToJavascript() {
             runOnUiThread(new Runnable() {
                 public void run() {
-                    webView.loadUrl("javascript:callFromActivity(\""+123456789+"\")");
+                    webView.loadUrl("javascript:callFromActivity(\"" + 123456789 + "\")");
                 }
             });
         }
