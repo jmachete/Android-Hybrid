@@ -1,8 +1,5 @@
-Android Hybrid allow you to build native mobile applications using HTML, CSS and JavaScript
-======
-
-###Objective
-Android Hybrid demonstrate the way of accessing native functions from javascript and vice-versa.
+Android Hybrid allow you to access native functions from javascript and vice-versa.
+=======
 
 ###Structure
 
